@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Formulário</title>
+</head>
+
+<body>
+	<form method="post" action="envio.php">
+		<div class="text">
+			<label for="name">Nome:</label>
+			<input type="text" name="name" id="name">
+			<br>
+			<br>
+			<label for="name">E-mail:</label>
+			<input type="email" name="email" id="email">
+			<br>
+		</div>
+		
+		<div class="radio">
+			<p>Sexo:</p>
+			<input type="radio" id="fem" name="sexo" value="Feminino">
+			<label for="fem">Feminino</label>
+			<input type="radio" id="mas" name="sexo" value="Masculino">
+			<label for="mas">Masculino</label>
+		</div>
+
+		<div class="select">
+			<p>Região em que mora:</p>
+			<select name="region">
+				<option value="value0" selected></option>
+				<option value="Norte">Norte</option>
+				<option value="Leste">Leste</option>
+				<option value="vSul">Sul</option>
+				<option value="Oeste">Oeste</option>
+			</select>
+		</div>
+
+		<div class="textarea">
+			<p>Opnine sobre o site:</p>
+			<textarea name="opinion" id="opinion" cols="50" rows="10"></textarea>
+		</div>
+
+		<div class="check">
+			<input type="checkbox" name="info" id="info">
+			<label for="info">Desejo receber informações sobre novidades no site</label>
+		</div>
+		
+		<div class="button">
+			<input type="reset" value="Limpar">
+			<input type="submit" value="Enviar">
+		</div>
+	</form>
+</body>
+
+</html>

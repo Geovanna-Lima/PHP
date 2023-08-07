@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Formulário</title>
+</head>
+
+<style>
+	body {
+		align-items: center;
+		display: flex;
+		justify-content: center;
+		height: 100vh;
+		box-sizing: border-box;
+		overflow-y: hidden;
+	}
+
+	fieldset {
+		display: flex;
+		width: 30.5rem;
+	}
+
+	form {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		width: 40rem;
+		margin: 0.5rem
+	}
+
+	.dados {
+		display: flex;
+		width: 100%;
+		margin-bottom: 0.5rem;
+	}
+
+	.dados>label {
+		width: 30%;
+	}
+
+	.enviar {
+		margin-right: 0.5rem;
+	}
+</style>
+
+<body>
+	<fieldset>
+
+		<form method="post" action="envio.php">
+
+			<div class="input dados">
+				<label for="name">Nome:</label>
+				<input type="text" name="name" id="name">
+			</div>
+
+			<div class="input dados">
+				<label for="dataNas">Data de nascimento:</label>
+				<input type="date" name="dataNas" id="dataNas">
+			</div>
+
+			<div class="textarea dados">
+				<label>Endereço:</label>
+				<textarea name="endereco" id="endereco" cols="30" rows="10"></textarea>
+			</div>
+
+			<div class="select dados">
+				<label>Estado civil:</label>
+				<select name="estadoCivil">
+					<option value="value0" selected>Selecione</option>
+					<option value="Solteiro">Solteiro (a)</option>
+					<option value="Casado">Casado (a)</option>
+					<option value="Viúvo">Viúvo (a)</option>
+				</select>
+			</div>
+
+			<div class="radio dados">
+				<label>Sexo:</label>
+				<div class="sexo">
+					<label for="mas">Masculino</label>
+					<input type="radio" id="mas" name="sexo" value="Masculino">
+					<label for="fem">Feminino</label>
+					<input type="radio" id="fem" name="sexo" value="Feminino">
+				</div>
+			</div>
+
+			<div class="check dados">
+				<label>Meio de locomoção:</label>
+				<div class="locomocao">
+					<input type="checkbox" name="locomocao" id="proprio" value="Veículo próprio">
+					<label for="proprio">Veículo próprio</label>
+					<input type="checkbox" name="locomocao" id="coletivo" value="Coletivo">
+					<label for="coletivo">Coletivo</label>
+					<input type="checkbox" name="locomocao" id="bicicleta" value="Bicicleta">
+					<label for="bicicleta">Bicicleta</label>
+				</div>
+			</div>
+
+			<div class="senha dados">
+				<label for="password">Senha:</label>
+				<input type="password" name="senha" id="senha">
+			</div>
+
+			<div class="confSenha dados">
+				<label for="senhaConfirmacao">Confirma senha:</label>
+				<input type="password" name="senhaConfirmacao" id="senhaConfirmacao">
+			</div>
+
+			<div class="button dados">
+				<input type="submit" class="enviar" value="Enviar">
+				<input type="reset" value="Limpar">
+			</div>
+		</form>
+	</fieldset>
+</body>
+
+</html>
